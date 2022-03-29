@@ -1,0 +1,14 @@
+{
+    "name": "Todoit",
+    "version": "1.0",
+    "description": "Manage you'r amazing ideas with Todoit",
+    "manifest_version": 3,
+    "author": "Mustapha Benammar",
+    "background": {
+    	"service_worker": "pupup.js"
+  },
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "Todoit"
+    }
+}

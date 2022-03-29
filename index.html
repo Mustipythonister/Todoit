@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todoit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script defer src="script.js"></script>
+  </head>
+  <script>
+
+    function show(shown, hidden, hidden2) {
+      document.getElementById(shown).style.display='block';
+      document.getElementById(hidden).style.display='none';
+      document.getElementById(hidden2).style.display='none';
+      return false;
+}
+
+
+  </script>
+  <body onload="show('Page1','Page2','Page3')" class="is-mobile">
+
+
+
+  <div id="Page1">
+  	<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="">
+      <img src="128.png">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+    
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a onclick="show('Page2','Page1','Page3');" class="navbar-item">
+        Why
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-item" onclick="show('Page3','Page1','Page2')">
+          About
+        </a>
+
+
+      </div>
+    </div>
+
+    <div class="navbar-end">
+
+    </div>
+  </div>
+</nav>
+<div class="columns is-two-thirds-tablet">
+  <div class="column is-narrow">
+    <div id="menu" class="box is-mobile" style="width: 100%;height:500px;position: relative;background: rgb(14,223,91);
+    background: linear-gradient(299deg, rgba(14,223,91,1) 0%, rgba(127,255,204,1) 100%);">
+      <h1 class="title has-text-white">Dashboard</h1>
+
+    <div id="modal-js-example" class="modal is-mobile is-two-thirds-tablet">
+      <div class="modal-background is-two-thirds-tablet"></div>
+
+      <div class="modal-content is-two-thirds-tablet">
+        <div class="box">
+          <p>Set your todo's information</p>
+          <input style="margin-top:10px;" class="is-primary input" type="text" placeholder="todo name..." id="title">
+          <textarea id="cnt" style="margin-top:10px;height:200px;resize:none;" class="is-primary input" type="text" placeholder="what do you want to do..."></textarea>
+          <button onclick="add()" style="margin-top:10px;" class="button is-primary">Add</button>
+          <button onclick="reset()" style="margin-top:10px;" class="button is-danger">Reset content</button>
+        </div>
+      </div>
+
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+
+    <button id="open" class="js-modal-trigger" data-target="modal-js-example">
+        Add todo
+    </button>
+    <br>
+    <button onclick="msg()" style="margin-top: 30px;" id="open2" class="is-static">
+      Add reminder (comming soon)
+    </button>
+    <br>
+    
+
+    </div>
+  </div>
+
+</div>
+<div class="columns is-desktop">
+  <div style="width:700px;position:relative;left:250px;bottom:475px;" class="column is-narrow">
+    <div id="list" style="height:500px;background: linear-gradient(90deg, rgba(14,223,91,1) 0%, rgba(127,255,204,1) 100%);" class="box">
+   
+    </div>
+  </div>
+</div>
+</div>
+<div id="Page2">
+  
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="128.png">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu2" aria-expanded="false" data-target="navbarBasicExample2">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+      
+  
+      
+      
+    </div>
+  
+    <div id="navbarBasicExample2" class="navbar-menu">
+      <div class="navbar-start">
+        
+        <a onclick="show('Page1','Page3','Page2')" class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          Why
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item" onclick="show('Page3','Page1','Page2')">
+            About
+          </a>
+
+          
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+  
+      </div>
+    </div>
+  </nav>
+  <div class="columns">
+
+    <div class="container">
+      <div class="box" style="margin-top: 120px;height:300px;background:#00a1db;">
+        <h1 class="title has-text-white">Why :</h1>
+        <p style="margin-top:10px;" class="subtitle has-text-white">Hey, we made this website <strong class="has-text-warning">'Todoit'</strong> for hardworkers to manage their amazing ideas in a single page.</p>
+        <p style="margin-top:10px;" class="subtitle has-text-white"><strong class="has-text-white">Posted by :</strong> Admin. 26/03/2022 | 14:19</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="Page3">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img src="128.png">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample3">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      
+    </div>
+  
+    <div id="navbarBasicExample3" class="navbar-menu">
+      <div class="navbar-start">
+        <a onclick="show('Page1','Page2','Page3');" class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item" onclick="show('Page2','Page1','Page3');">
+          Why
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item">
+            About
+          </a>
+  
+  
+        </div>
+      </div>
+  
+      <div class="navbar-end">
+  
+      </div>
+    </div>
+  </nav>
+  <div class="columns">
+
+    <div class="container">
+      <div class="box" style="margin-top: 120px;height:300px;background:#00a1db;">
+        <h1 class="title has-text-white">About :</h1>
+        <p style="margin-top:10px;" class="subtitle has-text-white">Hey, i'm mustapha the maker of <strong class="has-text-warning">'Todoit'</strong> . I'm 13 years old and i live in algeria, this is my project and i hope you like it</p>
+        <p style="margin-top:10px;" class="subtitle has-text-white"><strong class="has-text-white">Posted by :</strong> Admin. 26/03/2022 | 14:50</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </body>
+</html>
