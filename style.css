@@ -44,3 +44,21 @@
 	transition:0.5s;
 	box-shadow: -10px 10px 25px 5px rgba(0,0,0,.20);
 }
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #58637F;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #455274;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #616A80;
+}
